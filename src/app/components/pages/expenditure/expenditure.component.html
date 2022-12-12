@@ -1,0 +1,103 @@
+<mat-card class="card">
+    <mat-card>
+      <form>
+        <h2>Project Payments</h2>
+        <div class="pagetitle">
+          <nav>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+              <li class="breadcrumb-item active">Payments</li>
+            </ol>
+  
+          </nav>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <input type="text" class="form-control" placeholder="Project Name" required>
+          </div>
+          <div class="col-6">
+            <input type="text" class="form-control" placeholder="Contract Number" required>
+          </div>
+        </div><br>
+        <div class="row">
+          <div class="col-6">
+            <select class="form-control" required >
+              <option>Payment Option</option>
+              <option [value]='1'>Full Payment</option>
+              <option [value]='2'>Partial Payment</option>
+            </select>
+          </div>
+          <div class="col-6">
+            <select class="form-control" required  #sel (change)="doingPro(sel.value)">
+                <option>Project Conducted</option>
+                <option [value]='1'>Internal Project</option>
+                <option [value]='2'>External Project</option>
+              </select>
+          </div>
+        </div><br>
+        <div class="row">
+            <div class="col-6"  *ngIf="internal">
+                <input type="text" class="form-control" placeholder="Number Of People Participated" required>
+            </div>
+            <div class="col-6"  *ngIf="internal">
+             <textarea class="form-control" placeholder="please write discription and list participant in project"></textarea>
+            </div>
+          </div><br>
+        <div class="row" *ngIf="external">
+          <div class="col-6">
+            <mat-select placeholder="Select Deposite Bank" class="form-control">
+                <mat-option *ngFor="let Bank of Bank" [value]="Bank">{{Bank}}</mat-option>
+              </mat-select>
+          </div>
+          <div class="col-6">
+            <input type="number" class="form-control" placeholder="Account Number" required>
+          </div>
+        </div><br>
+        <div class="row">
+          <div class="col-6" *ngIf="external">
+            <input type="email" class="form-control" placeholder="Receiver Email" required>
+          </div>
+          <div class="col-6" *ngIf="external">
+            <input type="number" class="form-control" placeholder="Receiver Phone Number" required>
+          </div>
+        </div><br>
+        <div class="row">
+          <div class="col-6">
+            <input type="amount" class="form-control" placeholder="Amount Paid" required>
+          </div>
+          <div class="col-6">
+            <input type="amount" class="form-control" placeholder="Amount Remained" required>
+          </div>
+        </div><br>
+        <div class="row">
+            <div class="col-6">
+                <label>Payer Name</label>
+                <mat-select placeholder="Select Payer Name" class="form-control">
+                    <mat-option *ngFor="let Payer of Payer" [value]="Payer">{{Payer}}</mat-option>
+                  </mat-select>
+            </div>
+            <div class="col-6">
+              <label>Due Date</label>
+              <input type="date" class="form-control" placeholder="End Date" required>
+            </div>
+          </div> 
+          <div class="row">
+            <div class="col-6" >
+              <label>Payment Attachments</label>
+              <input type="file" class="form-control" placeholder="Start Date" required>
+            </div>
+            <div class="col-6" >
+                <label>Payment Discription</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                placeholder="Please type payment discription here....." required></textarea>
+            </div>
+          </div><br>
+          
+         
+        <button type="button" class="btn btn-success">Save</button>
+      </form>
+    </mat-card>
+  </mat-card>
+  <mat-card>
+    <app-footer></app-footer>
+  </mat-card>

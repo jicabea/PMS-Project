@@ -1,0 +1,9 @@
+.card{
+    max-width: 1700px;
+    min-width: 200px;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 60px;
+    justify-content: space-between;
+  background-color: rgb(235, 236, 237);
+  }

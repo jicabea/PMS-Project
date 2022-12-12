@@ -1,0 +1,49 @@
+<mat-nav-list>
+    <div class="logo py-4">
+      <img src="https://www.pngfind.com/pngs/m/154-1540858_banner-library-stock-man-user-internet-web-globe.png" alt="Company Logo" />
+      <h4 class="name">Admin</h4>
+        <p class="mail">admin@gmail.com</p>
+    </div>
+    <mat-divider></mat-divider>
+    <h2 matSubheader class="mt-2">APPLICATIONS</h2>
+  
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/home"><mat-icon>view_quilt</mat-icon> Dashboard</a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/projectin"><mat-icon>next_week</mat-icon>Project Registration</a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/list"><mat-icon>assignment_returned</mat-icon>Project Approval</a>
+    <mat-accordion>
+      <mat-expansion-panel >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+        <mat-icon>sync</mat-icon>Execution
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+     <mat-nav-list>   
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/list"><mat-icon>list</mat-icon> Project List </a>
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/list"><mat-icon>create_new_folder</mat-icon>Advanced Payment</a>
+      <mat-accordion>
+        <mat-expansion-panel >
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+             <mat-icon>work_outline</mat-icon> Interim Certificate  
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+       <mat-nav-list>
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/list"><mat-icon>create_new_folder</mat-icon> IPC </a>
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/list"><mat-icon>assignment_turned_in</mat-icon>Fee Notes</a>     
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/list"><mat-icon>list</mat-icon>Invoice</a>
+       </mat-nav-list> 
+        </mat-expansion-panel>    
+      </mat-accordion> 
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/list"><mat-icon>assignment_turned_in</mat-icon>Penultimate Certificate </a> 
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/list"><mat-icon>assignment_turned_in</mat-icon>Final Payment Certificate </a> 
+     </mat-nav-list> 
+      </mat-expansion-panel>    
+    </mat-accordion>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/bills"><mat-icon> monetization_on</mat-icon>Expenditure </a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/report"><mat-icon> layers</mat-icon>Reports </a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/overview"><mat-icon>account_circle</mat-icon>Profile</a>
+  </mat-nav-list>
+ 
+
+
+  

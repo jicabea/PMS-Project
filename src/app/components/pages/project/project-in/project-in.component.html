@@ -1,0 +1,157 @@
+<mat-card class="card">
+  <mat-card>
+    <form>
+      <h2>Project Registration</h2>
+      <div class="pagetitle">
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+            <li class="breadcrumb-item active">Registration</li>
+            <ul class="nav nav-tabs nav-tabs-bordered" style="padding-left: 500px;">
+              <li class="nav-item"> <button class="nav-link " routerLink="/projectin"
+                  style="background-color: rgb(97, 148, 123); width: 150px;">Internal Projects</button></li>
+              <li class="nav-item"> <button class="nav-link" routerLink="/projectout"
+                  style="background-color:rgb(143, 142, 148); width: 150px;">External Projects</button></li>
+            </ul>
+          </ol>
+
+        </nav>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <input type="text" class="form-control" placeholder="Project Name" required>
+        </div>
+        <div class="col-6">
+          <input type="text" class="form-control" placeholder="Contract Number" required>
+        </div>
+      </div><br>
+      <div class="row">
+        <div class="col-6">
+          <select class="form-control" required #sel (change)="changed(sel.value)">
+            <option>Select Technical supervising Department</option>
+            <option [value]='1'>ICT</option>
+            <option [value]='2'>DPM</option>
+            <option [value]='3'>DCM</option>
+            <option [value]='4'>HEMU</option>
+            <option [value]='5'>PMU</option>
+          </select>
+        </div>
+        <div class="col-6">
+          <mat-select placeholder="Select Project Manger" class="form-control">
+            <mat-option *ngFor="let Supervisor of Supervisor" [value]="Supervisor">{{Supervisor}}</mat-option>
+          </mat-select>
+        </div>
+      </div><br>
+      <div class="row">
+        <div class="col-6">
+          <select class="form-control" required>
+            <option>Project Codes</option>
+            <option>6310-DC Courts</option>
+            <option>6311-IJA</option>
+            <option>6312-PC Courts</option>
+            <option>6313-BSAAT</option>
+            <option>6314-HC</option>
+            <option>6315-MABORESHO</option>
+            <option>6327-Office Build</option>
+            <option>6389-HQ</option>
+            <option>6396-UNICEF</option>
+
+          </select>
+        </div>
+        <div class="col-6">
+          <select class="form-control" required>
+            <option>Select Currency</option>
+            <option>Tshillings</option>
+            <option>Dollar</option>
+          </select>
+        </div>
+      </div><br>
+      <div class="row">
+        <div class="col-6">
+          <input type="number" class="form-control" placeholder="Project Cost" required>
+        </div>
+        <div class="col-6">
+          <select class="form-control" required>
+            <option>Select Project Financier</option>
+            <option>Loan</option>
+            <option>Aids</option>
+            <option>Local funds</option>
+          </select>
+        </div>
+      </div><br>
+      <div class="row">
+        <div class="col-6">
+          <label>Start Date</label>
+          <input type="date" class="form-control" placeholder="Start Date" required>
+        </div>
+        <div class="col-6">
+          <label>End Date</label>
+          <input type="date" class="form-control" placeholder="End Date" required>
+        </div>
+      </div><br>
+      <div class="row" *ngIf="ict">
+        
+          <div class="col-6">
+            <label>Project Contract</label>
+            <input type="file" class="form-control" placeholder="Start Date" required>
+          </div>
+          <div class="col-6">
+            <label>Work plan</label>
+            <input type="file" class="form-control" placeholder="End Date" required>
+          </div>
+        </div><br>  
+      <div class="row" *ngIf="ict">
+        <div class="col-6">
+          <label>Business Process</label>
+          <input type="file" class="form-control" placeholder="Start Date" required>
+        </div>
+        <div class="col-6">
+          <label>Approves System Designs</label>
+          <input type="file" class="form-control" placeholder="End Date" required>
+        </div>
+      </div>
+
+      <div class="row" *ngIf="pmu">        
+          <div class="col-6">
+            <label>Supplier Contract</label>
+            <input type="file" class="form-control" placeholder="Start Date" required>
+          </div>
+          <div class="col-6">
+            <label>Competitor Contracts</label>
+            <input type="file" class="form-control" placeholder="End Date" required>
+          </div>
+        </div>
+      
+
+
+      <div class="row" *ngIf="hemu">
+        
+          <div class="col-6" >
+            <label>Title deed</label>
+            <input type="file" class="form-control" placeholder="Approved Artitecture plan" required>
+          </div>
+          <div class="col-6" >
+            <label>Project scope/Main Activities</label>
+            <input type="text" class="form-control" placeholder="try some">
+          </div>
+        </div><br>
+        <div class="row" *ngIf="hemu">
+          <div class="col-6" >
+            <label>Title deed</label>
+            <input type="file" class="form-control" placeholder="Start Date" required>
+          </div>
+          <div class="col-6" >
+            <label>Project scope/Main Activities</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+              placeholder="Please type project objectives here....." required></textarea>
+          </div>
+        </div><br>
+       
+       
+      <button type="button" class="btn btn-success">Save</button>
+    </form>
+  </mat-card>
+</mat-card>
+<mat-card>
+  <app-footer></app-footer>
+</mat-card>
