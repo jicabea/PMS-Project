@@ -28,6 +28,12 @@ import { ViewPageComponent } from './components/pages/view-page/view-page.compon
 import { ExpenditureComponent } from './components/pages/expenditure/expenditure.component';
 import { ProjectInComponent } from './components/pages/project/project-in/project-in.component';
 import { ProjectExComponent } from './components/pages/project/project-ex/project-ex.component';
+import { AdvancedComponent } from './components/pages/payments/advanced/advanced.component';
+import { FinalPaymentComponent } from './components/pages/payments/final-payment/final-payment.component';
+import { PenultimateComponent } from './components/pages/payments/penultimate/penultimate.component';
+import { IpcComponent } from './components/pages/payments/interim/ipc/ipc.component';
+import { FeeNotesComponent } from './components/pages/payments/interim/fee-notes/fee-notes.component';
+import { InvoiceComponent } from './components/pages/payments/interim/invoice/invoice.component';
 
 
 @NgModule({
@@ -44,6 +50,12 @@ import { ProjectExComponent } from './components/pages/project/project-ex/projec
     ExpenditureComponent,
     ProjectInComponent,
     ProjectExComponent,
+    AdvancedComponent,
+    FinalPaymentComponent,
+    PenultimateComponent,
+    IpcComponent,
+    FeeNotesComponent,
+    InvoiceComponent,
   ],
   imports: [
     BrowserModule,
