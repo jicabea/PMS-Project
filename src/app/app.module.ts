@@ -16,6 +16,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
+import {MatDialogModule} from '@angular/material/dialog';
 // COMPONENTS
 import { SidenavComponent } from './components/templates/sidenav/sidenav.component';
 import { HeaderComponent } from './components/templates/header/header.component';
@@ -24,16 +25,11 @@ import { PasswordComponent } from './components/pages/profile/password/password.
 import { EditprofileComponent } from './components/pages/profile/editprofile/editprofile.component';
 import { ProfileComponent } from './components/pages/profile/profile/profile.component';
 import { ProjectListComponent } from './components/pages/approval/project-list/project-list.component';
-import { ViewPageComponent } from './components/pages/view-page/view-page.component';
 import { ExpenditureComponent } from './components/pages/expenditure/expenditure.component';
 import { ProjectInComponent } from './components/pages/project/project-in/project-in.component';
 import { ProjectExComponent } from './components/pages/project/project-ex/project-ex.component';
-import { AdvancedComponent } from './components/pages/payments/advanced/advanced.component';
-import { FinalPaymentComponent } from './components/pages/payments/final-payment/final-payment.component';
-import { PenultimateComponent } from './components/pages/payments/penultimate/penultimate.component';
-import { IpcComponent } from './components/pages/payments/interim/ipc/ipc.component';
-import { FeeNotesComponent } from './components/pages/payments/interim/fee-notes/fee-notes.component';
-import { InvoiceComponent } from './components/pages/payments/interim/invoice/invoice.component';
+import { EditApprovalComponent } from './components/pages/approval/edit-approval/edit-approval.component';
+import { ViewApprovalComponent } from './components/pages/approval/view-approval/view-approval.component';
 
 
 @NgModule({
@@ -46,16 +42,11 @@ import { InvoiceComponent } from './components/pages/payments/interim/invoice/in
     EditprofileComponent,
     ProfileComponent,
     ProjectListComponent,
-    ViewPageComponent,
     ExpenditureComponent,
     ProjectInComponent,
     ProjectExComponent,
-    AdvancedComponent,
-    FinalPaymentComponent,
-    PenultimateComponent,
-    IpcComponent,
-    FeeNotesComponent,
-    InvoiceComponent,
+    EditApprovalComponent,
+    ViewApprovalComponent,
   ],
   imports: [
     BrowserModule,
@@ -73,6 +64,7 @@ import { InvoiceComponent } from './components/pages/payments/interim/invoice/in
     MatCardModule,
     MatButtonModule,
     MatInputModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

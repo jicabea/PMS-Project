@@ -11,4 +11,6 @@ export class AppComponent {
   sideBarToggler() {
     this.sideBarOpen = !this.sideBarOpen;
   }
+
+ 
 }
