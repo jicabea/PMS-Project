@@ -30,6 +30,7 @@ import { ProjectInComponent } from './components/pages/project/project-in/projec
 import { ProjectExComponent } from './components/pages/project/project-ex/project-ex.component';
 import { EditApprovalComponent } from './components/pages/approval/edit-approval/edit-approval.component';
 import { ViewApprovalComponent } from './components/pages/approval/view-approval/view-approval.component';
+import { ExecutionComponent } from './components/pages/execution/execution.component';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { ViewApprovalComponent } from './components/pages/approval/view-approval
     ProjectExComponent,
     EditApprovalComponent,
     ViewApprovalComponent,
+    ExecutionComponent,
   ],
   imports: [
     BrowserModule,

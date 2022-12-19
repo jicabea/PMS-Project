@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProjectListComponent } from './components/pages/approval/project-list/project-list.component';
+import { ExecutionComponent } from './components/pages/execution/execution.component';
 import { ExpenditureComponent } from './components/pages/expenditure/expenditure.component';
 import { EditprofileComponent } from './components/pages/profile/editprofile/editprofile.component';
 import { PasswordComponent } from './components/pages/profile/password/password.component';
@@ -14,10 +15,10 @@ const routes: Routes = [
   { path: 'password', component: PasswordComponent},
   { path: 'editprofile', component:EditprofileComponent},
   { path: 'list', component:ProjectListComponent},
-  // { path: 'view', component:ViewPageComponent},
   { path: 'bills', component:ExpenditureComponent},
   { path: 'projectin', component: ProjectInComponent},
   { path: 'projectout', component: ProjectExComponent},
+  { path: 'execution', component: ExecutionComponent},
 ];
 
 @NgModule({
