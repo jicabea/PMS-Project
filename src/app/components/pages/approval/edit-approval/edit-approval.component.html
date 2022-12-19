@@ -1,11 +1,157 @@
-<h2 mat-dialog-title>Install Angular</h2>
-<mat-dialog-content class="mat-typography">
-  <h3>What is Angular?</h3>
+<mat-dialog-content class="mat-typography">  
+  <form>
+    <h2>Project Details Edit</h2>
+    <div class="pagetitle">
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
+          <li class="breadcrumb-item active">Project Details Edit</li>            
+        </ol>
+      </nav>
+    </div> 
+    <div class="row">
+      <div class="col-6">
+        <input type="text" class="form-control" placeholder="Project Name" value="Ujenzi wa mahakama za mwanzo 17">
+      </div>
+      <div class="col-6">
+        <input type="text" class="form-control" placeholder="Contract Number" Value="UHD/WEi?COA/012">
+      </div>
+    </div><br>
+     <div class="row">
+      <div class="col-6">
+        <select class="form-control" value="6312-PC Courts">
+          <option>Project Codes</option>
+          <option>6310-DC Courts</option>
+          <option>6311-IJA</option>
+          <option>6312-PC Courts</option>
+          <option>6313-BSAAT</option>
+          <option>6314-HC</option>
+          <option>6315-MABORESHO</option>
+          <option>6327-Office Build</option>
+          <option>6389-HQ</option>
+          <option>6396-UNICEF</option>
 
-  <p>demo edit</p>
+        </select>
+      </div>
+      <div class="col-6">
+        <select class="form-control" value="Tshillings">
+          <option>Select Currency</option>
+          <option>Tshillings</option>
+          <option>Dollar</option>
+        </select>
+      </div>
+    </div><br>
+    <div class="row">
+      <div class="col-6"><label for="">Project Cost:</label>
+        <input type="number" class="form-control"  value="2000000">
+      </div>
+      <div class="col-6">
+        <label for="Project Financier"></label>
+        <select class="form-control" Value="Local Fund">
+          <option>Select Project Financier</option>
+          <option>Loan</option>
+          <option>Aids</option>
+          <option>Local funds</option>
+        </select>
+      </div>
+    </div><br>
+    <div class="row">
+      <div class="col-6">
+        <label>Start Date</label>
+        <input type="date" class="form-control"  value="21/05/2017">
+      </div>
+      <div class="col-6">
+        <label>End Date</label>
+        <input type="date" class="form-control"  value="21/05/2024">
+      </div>
+    </div><br>
+    <div class="row" >
+      
+        <div class="col-6">
+          <label>Project Contract</label>
+          <input type="file" class="form-control" placeholder="Start Date" required>
+        </div>
+        <div class="col-6">
+          <label>Work plan</label>
+          <input type="file" class="form-control" placeholder="End Date" required>
+        </div>
+      </div><br>  
+    <div class="row" *ngIf="ict">
+      <div class="col-6">
+        <label>Business Process</label>
+        <input type="file" class="form-control" placeholder="Start Date" required>
+      </div>
+      <div class="col-6">
+        <label>Approves System Designs</label>
+        <input type="file" class="form-control" placeholder="End Date" required>
+      </div>
+    </div>
+
+    <div class="row" *ngIf="pmu">        
+        <div class="col-6">
+          <label>Supplier Contract</label>
+          <input type="file" class="form-control" placeholder="Start Date" required>
+        </div>
+        <div class="col-6">
+          <label>Competitor Contracts</label>
+          <input type="file" class="form-control" placeholder="End Date" required>
+        </div>
+      </div>
+    
+
+
+    <div class="row" *ngIf="hemu">
+      
+        <div class="col-6" >
+          <label>Title deed</label>
+          <input type="file" class="form-control" placeholder="Approved Artitecture plan" required>
+        </div>
+        <div class="col-6" >
+          <label>Project scope/Main Activities</label>
+          <input type="text" class="form-control" placeholder="try some">
+        </div>
+      </div><br>
+      <div class="row" *ngIf="hemu">
+        <div class="col-6" >
+          <label>Title deed</label>
+          <input type="file" class="form-control" placeholder="Start Date" required>
+        </div>
+        <div class="col-6" >
+          <label>Project scope/Main Activities</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+            placeholder="Please type project objectives here....." required></textarea>
+        </div>
+      </div><br>
+      <div class="row" *ngIf="hemu">
+        <div class="col-6" >
+          <label>Title deed</label>
+          <input type="file" class="form-control" placeholder="Start Date" required>
+        </div>
+        <div class="col-6" >
+          <label>Project scope/Main Activities</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+            placeholder="Please type project objectives here....." required></textarea>
+        </div>
+      </div><br>
+      <div class="row">
+        <div class="col-6">
+          <label for="">Project Scope</label>
+          <p>Angular is a platform that makes it easy to build applications with the web. Angular
+            combines declarative templates, dependency injection, end to end tooling, and integrated
+            best practices to solve development challenges. Angular empowers developers to build
+            applications that live on the web, mobile, or the desktop</p>
+        </div>
+        <div class="col-6">
+          <label for=""><b>Project Activities</b></label>
+        <input type="text">
+        </div>
+      </div>
+
+  
+  </form>
 </mat-dialog-content>
 
 <mat-dialog-actions align="end">
-  <button mat-button mat-dialog-close>Cancel</button>
-  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Install</button>
+<button mat-button mat-dialog-close class="btn btn-danger">Cancel</button>
+<button mat-button [mat-dialog-close]="true" cdkFocusInitial class="btn btn-primary">Edit</button>
 </mat-dialog-actions>

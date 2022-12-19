@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProjectListComponent } from './components/pages/approval/project-list/project-list.component';
+import { DashboardComponent } from './components/pages/dashboard/dashboard.component';
 import { ExecutionComponent } from './components/pages/execution/execution.component';
 import { ExpenditureComponent } from './components/pages/expenditure/expenditure.component';
 import { EditprofileComponent } from './components/pages/profile/editprofile/editprofile.component';
@@ -10,7 +11,8 @@ import { ProjectExComponent } from './components/pages/project/project-ex/projec
 import { ProjectInComponent } from './components/pages/project/project-in/project-in.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: DashboardComponent},
   { path: 'overview', component: ProfileComponent},
   { path: 'password', component: PasswordComponent},
   { path: 'editprofile', component:EditprofileComponent},
