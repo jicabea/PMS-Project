@@ -30,8 +30,14 @@ import { ProjectInComponent } from './components/pages/project/project-in/projec
 import { ProjectExComponent } from './components/pages/project/project-ex/project-ex.component';
 import { EditApprovalComponent } from './components/pages/approval/edit-approval/edit-approval.component';
 import { ViewApprovalComponent } from './components/pages/approval/view-approval/view-approval.component';
-import { ExecutionComponent } from './components/pages/execution/execution.component';
 import { DashboardComponent } from './components/pages/dashboard/dashboard.component';
+import { EditExecutionComponent } from './components/pages/execution/edit-execution/edit-execution.component';
+import { ViewExecutionComponent } from './components/pages/execution/view-execution/view-execution.component';
+import { ExecutionListComponent } from './components/pages/execution/execution-list/execution-list.component';
+import { PaidfullComComponent } from './components/pages/expenditure/paidfull-com/paidfull-com.component';
+import { PaidpartialComponent } from './components/pages/expenditure/paidpartial/paidpartial.component';
+import { UnpaidComponent } from './components/pages/expenditure/unpaid/unpaid.component';
+import { ConsultantComponent } from './components/pages/consultant/consultant.component';
 
 
 @NgModule({
@@ -49,8 +55,14 @@ import { DashboardComponent } from './components/pages/dashboard/dashboard.compo
     ProjectExComponent,
     EditApprovalComponent,
     ViewApprovalComponent,
-    ExecutionComponent,
     DashboardComponent,
+    EditExecutionComponent,
+    ViewExecutionComponent,
+    ExecutionListComponent,
+    PaidfullComComponent,
+    PaidpartialComponent,
+    UnpaidComponent,
+    ConsultantComponent,
   ],
   imports: [
     BrowserModule,
